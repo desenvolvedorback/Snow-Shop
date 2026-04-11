@@ -1,8 +1,34 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
+
+  <!-- SEO + PREVIEW -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Snow Shop</title>  <style>
+
+  <title>Snow Shop</title>
+
+  <meta name="description" content="Snow Shop - Vitrine digital de compras e vendas. Encontre produtos e fale direto com vendedores pelo WhatsApp.">
+  <meta name="keywords" content="snow shop, marketplace, whatsapp vendas, catálogo online">
+  <meta name="author" content="Snow Shop">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="❄️ Snow Shop - Catálogo Oficial">
+  <meta property="og:description" content="Confira produtos exclusivos e fale direto com vendedores.">
+  <meta property="og:image" content="https://files.catbox.moe/7wdr9b.jpg">
+  <meta property="og:url" content="https://snow-shop-dashbord.netlify.app/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="❄️ Snow Shop">
+  <meta name="twitter:description" content="Vitrine digital com produtos e contato direto no WhatsApp.">
+  <meta name="twitter:image" content="https://files.catbox.moe/7wdr9b.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://files.catbox.moe/7wdr9b.jpg">
+
+  <style>
     * {
       margin: 0;
       padding: 0;
@@ -58,11 +84,11 @@
       border: 1px solid #00eaff;
       transition: 0.3s;
     }
-    
+
     .card.destaque {
-  border: 2px solid gold;
-  box-shadow: 0 0 20px gold;
-}
+      border: 2px solid gold;
+      box-shadow: 0 0 20px gold;
+    }
 
     .card:hover {
       transform: scale(1.05);
@@ -94,45 +120,73 @@
       background: #00bcd4;
     }
 
-  </style></head>
-<body><header>
+  </style>
+</head>
+
+<body>
+
+<header>
   <h1>❄️ Snow Shop</h1>
   <p>Catálogo oficial do grupo</p>
-</header><div class="search">
+</header>
+
+<div class="search">
   <input type="text" id="searchInput" placeholder="Pesquisar produto...">
-</div><div class="container" id="productContainer">  <!-- CARD EXEMPLO -->  <div class="card">
-    <img src="https://files.catbox.moe/iktrv1.png" alt="Produto">
+</div>
+
+<div class="container" id="productContainer">
+
+  <div class="card">
+    <img src="https://files.catbox.moe/iktrv1.png">
     <h3>Snow Bot</h3>
     <a href="https://wa.me/5514991023986?text=Vi%20seu%20produto%20na%20Snow%20Shop" target="_blank">Comprar</a>
-  </div>  <div class="card">
-    <img src="https://files.catbox.moe/nqey2f.jpg" alt="Produto">
+  </div>
+
+  <div class="card">
+    <img src="https://files.catbox.moe/nqey2f.jpg">
     <h3>GB STORE</h3>
     <a href="https://wa.me/5514998422445?text=Vi%20seu%20produto%20na%20Snow%20Shop" target="_blank">Comprar</a>
-    </div>  <div class="card">
-    <img src="https://via.placeholder.com/300" alt="Produto">
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300">
     <h3>vaga</h3>
     <a href="https://wa.me/5598888888888" target="_blank">Comprar</a>
-    </div>  <div class="card">
-    <img src="https://via.placeholder.com/300" alt="Produto">
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300">
     <h3>vaga</h3>
     <a href="https://wa.me/5598888888888" target="_blank">Comprar</a>
-    </div>  <div class="card">
-    <img src="https://via.placeholder.com/300" alt="Produto">
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300">
     <h3>vaga</h3>
     <a href="https://wa.me/5598888888888" target="_blank">Comprar</a>
-    </div>  <div class="card">
-    <img src="https://via.placeholder.com/300" alt="Produto">
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300">
     <h3>vaga</h3>
     <a href="https://wa.me/5598888888888" target="_blank">Comprar</a>
-    </div>  <div class="card">
-    <img src="https://via.placeholder.com/300" alt="Produto">
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300">
     <h3>vaga</h3>
     <a href="https://wa.me/5598888888888" target="_blank">Comprar</a>
-    </div>  <div class="card">
-    <img src="https://via.placeholder.com/300" alt="Produto">
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300">
     <h3>vaga</h3>
     <a href="https://wa.me/5598888888888" target="_blank">Comprar</a>
-  </div></div><script>
+  </div>
+
+</div>
+
+<script>
   const searchInput = document.getElementById("searchInput");
   const cards = document.querySelectorAll(".card");
 
@@ -149,5 +203,7 @@
       }
     });
   });
-</script></body>
+</script>
+
+</body>
 </html>
