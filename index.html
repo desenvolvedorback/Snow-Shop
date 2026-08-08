@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snow Hub | Negócios Digitais</title>
+<meta name="description" content="Snow Hub — produtos, serviços, projetos, oportunidades e negócios digitais em um só lugar.">
+<meta name="keywords" content="Snow Hub, Snow Shop, negócios digitais, produtos, serviços, IA, programação">
+<meta name="author" content="Snow Hub">
+<meta property="og:title" content="❄️ Snow Hub | Negócios Digitais">
+<meta property="og:description" content="Produtos, serviços, projetos e oportunidades digitais em um só lugar.">
+<meta property="og:image" content="https://files.catbox.moe/7wdr9b.jpg">
+<meta property="og:url" content="https://snow-shop-dashbord.netlify.app/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#05070d">
+<link rel="icon" href="https://files.catbox.moe/7wdr9b.jpg">
+
+<style>
+:root{--bg:#03050a;--card:rgba(11,17,29,.72);--blue:#007bff;--cyan:#00e5ff;--text:#f5f9ff;--muted:#8d9aae;--radius:20px}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:radial-gradient(circle at 15% 10%,rgba(0,123,255,.13),transparent 30%),radial-gradient(circle at 85% 20%,rgba(0,229,255,.09),transparent 30%),linear-gradient(180deg,#03050a 0%,#050812 50%,#020307 100%);color:var(--text);min-height:100vh;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(0,229,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,255,.025) 1px,transparent 1px);background-size:50px 50px;pointer-events:none;z-index:-2}
+::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#020307}::-webkit-scrollbar-thumb{background:linear-gradient(var(--blue),var(--cyan));border-radius:20px}
+.particles{position:fixed;inset:0;pointer-events:none;z-index:-1;overflow:hidden}.particle{position:absolute;width:2px;height:2px;background:var(--cyan);border-radius:50%;box-shadow:0 0 10px var(--cyan);opacity:.45;animation:floatParticle linear infinite}
+@keyframes floatParticle{from{transform:translateY(110vh)}to{transform:translateY(-10vh)}}
+header{position:sticky;top:0;z-index:100;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 6%;background:rgba(3,5,10,.78);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,229,255,.12)}
+.logo{display:flex;align-items:center;gap:12px;font-size:21px;font-weight:900;letter-spacing:-.5px}.logo-icon{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--cyan));box-shadow:0 0 20px rgba(0,229,255,.35);font-size:21px}.logo span{color:var(--cyan)}
+nav{display:flex;align-items:center;gap:28px}nav a{color:#aeb9c9;text-decoration:none;font-size:14px;font-weight:600;transition:.25s}nav a:hover{color:var(--cyan)}.nav-button{padding:10px 17px;border:1px solid rgba(0,229,255,.35);border-radius:10px;color:var(--cyan)!important;background:rgba(0,229,255,.06)}
+.hero{position:relative;max-width:1250px;margin:auto;min-height:570px;display:flex;align-items:center;justify-content:center;text-align:center;padding:90px 20px 70px}.hero::before{content:"";position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(0,229,255,.10),transparent 65%);filter:blur(20px);z-index:-1}.hero-content{max-width:850px;animation:heroIn .9s ease}
+@keyframes heroIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:8px 15px;border:1px solid rgba(0,229,255,.2);border-radius:999px;background:rgba(0,229,255,.05);color:var(--cyan);font-size:13px;font-weight:700;margin-bottom:25px;box-shadow:0 0 25px rgba(0,229,255,.07)}.status-dot{width:7px;height:7px;background:#00ff9d;border-radius:50%;box-shadow:0 0 10px #00ff9d}
+.hero h1{font-size:clamp(48px,8vw,88px);line-height:.95;letter-spacing:-5px;font-weight:950;margin-bottom:25px;background:linear-gradient(120deg,#fff 15%,#d9faff 45%,var(--cyan) 70%,#008cff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero h1 span{display:block;background:linear-gradient(90deg,var(--blue),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{max-width:680px;margin:auto;color:var(--muted);font-size:17px;line-height:1.7}
+.hero-buttons{display:flex;justify-content:center;gap:14px;margin-top:35px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:13px;text-decoration:none;font-size:14px;font-weight:800;transition:.3s}.btn-primary{color:#001018;background:linear-gradient(135deg,var(--cyan),#008cff);box-shadow:0 0 30px rgba(0,229,255,.20)}.btn-primary:hover{transform:translateY(-3px);box-shadow:0 10px 35px rgba(0,229,255,.28)}.btn-secondary{color:#d8e7f5;border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.04)}.btn-secondary:hover{transform:translateY(-3px);border-color:rgba(0,229,255,.25);background:rgba(0,229,255,.06)}
+.stats{max-width:1050px;margin:-20px auto 80px;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.stat{padding:25px;text-align:center;border:1px solid rgba(255,255,255,.07);border-radius:18px;background:rgba(9,14,24,.65);backdrop-filter:blur(12px);transition:.3s}.stat:hover{transform:translateY(-4px);border-color:rgba(0,229,255,.20)}.stat strong{display:block;font-size:29px;background:linear-gradient(90deg,#fff,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}.stat span{color:var(--muted);font-size:13px}
+main{max-width:1250px;margin:auto;padding:0 20px 100px}.section-header{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:25px}.section-title small{display:block;color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:7px}.section-title h2{font-size:30px;letter-spacing:-.8px}.section-title p{color:var(--muted);margin-top:6px;font-size:14px}
+.search-wrapper{margin-bottom:25px}.search-box{position:relative}.search-box input{width:100%;padding:17px 20px 17px 50px;border-radius:15px;border:1px solid rgba(0,229,255,.13);outline:none;background:rgba(7,12,21,.75);color:white;font-size:14px;transition:.3s}.search-box input:focus{border-color:rgba(0,229,255,.45);box-shadow:0 0 30px rgba(0,229,255,.07)}.search-icon{position:absolute;left:18px;top:50%;transform:translateY(-50%);color:var(--cyan);font-size:18px}
+.filters{display:flex;gap:9px;overflow-x:auto;padding-bottom:8px;margin-bottom:30px}.filter{flex-shrink:0;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.035);color:#aeb9c9;padding:9px 15px;border-radius:999px;cursor:pointer;font-size:13px;font-weight:700;transition:.25s}.filter:hover,.filter.active{color:#001018;background:linear-gradient(90deg,var(--cyan),#008cff);border-color:transparent}
+.products{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:18px}.product{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.07);border-radius:var(--radius);background:linear-gradient(145deg,rgba(15,23,39,.88),rgba(5,9,16,.9));transition:transform .35s,border-color .35s,box-shadow .35s;animation:cardIn .5s ease both}.product:hover{transform:translateY(-8px);border-color:rgba(0,229,255,.30);box-shadow:0 20px 50px rgba(0,0,0,.35),0 0 30px rgba(0,229,255,.06)}.product.featured{border-color:rgba(0,229,255,.35);box-shadow:inset 0 0 40px rgba(0,229,255,.025)}
+@keyframes cardIn{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+.product-image{position:relative;height:210px;overflow:hidden;background:#05080e}.product-image img{width:100%;height:100%;object-fit:cover;transition:transform .5s}.product:hover .product-image img{transform:scale(1.06)}.product-badge{position:absolute;top:13px;left:13px;padding:6px 10px;border-radius:999px;background:rgba(0,0,0,.65);backdrop-filter:blur(10px);color:var(--cyan);border:1px solid rgba(0,229,255,.25);font-size:11px;font-weight:800}
+.product-content{padding:18px}.product-category{color:var(--cyan);text-transform:uppercase;font-size:10px;font-weight:800;letter-spacing:1.4px;margin-bottom:7px}.product h3{font-size:18px;margin-bottom:8px}.product-description{color:var(--muted);font-size:13px;line-height:1.5;min-height:40px;margin-bottom:15px}.product-footer{display:flex;align-items:center;justify-content:space-between;gap:10px}.seller{color:#8390a3;font-size:11px}.seller strong{display:block;color:#d8e5f2;font-size:12px}.product-button{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:10px;text-decoration:none;color:#001018;background:linear-gradient(135deg,var(--cyan),#008cff);font-size:12px;font-weight:900;transition:.25s}.product-button:hover{transform:scale(1.04);box-shadow:0 0 20px rgba(0,229,255,.20)}
+.empty{display:none;padding:60px 20px;text-align:center;color:var(--muted)}.empty-icon{font-size:40px;margin-bottom:12px}
+.cta{position:relative;overflow:hidden;margin-top:80px;padding:60px 35px;text-align:center;border:1px solid rgba(0,229,255,.18);border-radius:25px;background:radial-gradient(circle at center,rgba(0,229,255,.10),transparent 60%),rgba(7,12,21,.75)}.cta::before{content:"";position:absolute;width:300px;height:300px;top:-170px;left:50%;transform:translateX(-50%);border-radius:50%;background:rgba(0,229,255,.10);filter:blur(60px)}.cta h2{position:relative;font-size:32px;margin-bottom:12px}.cta p{position:relative;max-width:650px;margin:auto;color:var(--muted);line-height:1.6;font-size:14px}.cta .btn{position:relative;margin-top:25px}
+.notice{margin-top:20px;padding:17px;border:1px solid rgba(255,255,255,.06);border-radius:15px;background:rgba(255,255,255,.025);color:#748195;font-size:11px;line-height:1.6;text-align:center}.notice strong{color:#aab6c7}
+footer{padding:45px 20px;border-top:1px solid rgba(255,255,255,.06);text-align:center;background:#020307}.footer-logo{font-size:20px;font-weight:900;margin-bottom:10px}.footer-logo span{color:var(--cyan)}footer p{color:#667286;font-size:12px}.zyntra{margin-top:12px;color:#435064;font-size:11px}.zyntra span{color:var(--cyan)}
+@media(max-width:700px){header{padding:0 18px}nav{display:none}.hero{min-height:500px;padding-top:70px}.hero h1{font-size:54px;letter-spacing:-3px}.hero p{font-size:15px}.stats{grid-template-columns:1fr;margin-bottom:60px}.stat{padding:20px}.section-header{align-items:flex-start;flex-direction:column}.products{grid-template-columns:1fr}.product-image{height:230px}.cta{padding:45px 20px}.cta h2{font-size:26px}}
+</style>
+</head>
+
+<body>
+<div class="particles" id="particles"></div>
+
+<header>
+  <div class="logo"><div class="logo-icon">❄️</div>SNOW <span>HUB</span></div>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#explorar">Explorar</a>
+    <a href="#anunciar">Anunciar</a>
+    <a class="nav-button" href="https://chat.whatsapp.com/Jlrig7nzlwv8MQ9udh5szg?mode=gi_t" target="_blank">💬 Grupo Oficial</a>
+  </nav>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <div class="badge"><span class="status-dot"></span>HUB DIGITAL ATIVO</div>
+    <h1>Snow <span>Hub.</span></h1>
+    <p>O ponto de encontro para produtos, serviços, projetos, tecnologia e oportunidades no mercado digital. Descubra, divulgue e conecte-se.</p>
+    <div class="hero-buttons">
+      <a href="#explorar" class="btn btn-primary">🚀 Explorar oportunidades</a>
+      <a href="#anunciar" class="btn btn-secondary">📢 Quero anunciar</a>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat"><strong id="productCount">0</strong><span>Oportunidades listadas</span></div>
+  <div class="stat"><strong>24/7</strong><span>Vitrine disponível</span></div>
+  <div class="stat"><strong>R$5</strong><span>Para anunciar</span></div>
+</section>
+
+<main id="explorar">
+  <div class="section-header">
+    <div class="section-title">
+      <small>Marketplace digital</small>
+      <h2>Explore oportunidades</h2>
+      <p>Produtos, serviços e projetos divulgados pela comunidade.</p>
+    </div>
+  </div>
+
+  <div class="search-wrapper">
+    <div class="search-box">
+      <span class="search-icon">⌕</span>
+      <input type="text" id="searchInput" placeholder="Pesquisar produtos, serviços, IA, sites..." autocomplete="off">
+    </div>
+  </div>
+
+  <div class="filters">
+    <button class="filter active" data-category="all">✦ Todos</button>
+    <button class="filter" data-category="tecnologia">💻 Tecnologia</button>
+    <button class="filter" data-category="bots">🤖 Bots & IA</button>
+    <button class="filter" data-category="sites">🌐 Sites</button>
+    <button class="filter" data-category="servicos">🛠️ Serviços</button>
+    <button class="filter" data-category="outros">✦ Outros</button>
+  </div>
+
+  <div class="products" id="productContainer">
+    <article class="product featured" data-category="bots" data-name="snow bot">
+      <div class="product-image">
+        <img src="https://files.catbox.moe/iktrv1.png" alt="Snow Bot" loading="lazy">
+        <div class="product-badge">⭐ DESTAQUE</div>
+      </div>
+      <div class="product-content">
+        <div class="product-category">Bots & IA</div>
+        <h3>Snow Bot</h3>
+        <p class="product-description">Bot multifuncional para WhatsApp com diversos recursos, automações e ferramentas.</p>
+        <div class="product-footer">
+          <div class="seller">Vendedor<strong>Snow Bot</strong></div>
+          <a class="product-button" href="https://wa.me/5514991023986?text=Vi%20seu%20produto%20na%20Snow%20Shop" target="_blank">Ver produto →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="product" data-category="servicos" data-name="gb store">
+      <div class="product-image"><img src="https://files.catbox.moe/nqey2f.jpg" alt="GB STORE" loading="lazy"></div>
+      <div class="product-content">
+        <div class="product-category">Serviços</div>
+        <h3>GB STORE</h3>
+        <p class="product-description">Confira produtos e oportunidades disponíveis na loja.</p>
+        <div class="product-footer">
+          <div class="seller">Vendedor<strong>GB STORE</strong></div>
+          <a class="product-button" href="https://wa.me/5514998422445?text=Vi%20seu%20produto%20na%20Snow%20Shop" target="_blank">Ver produto →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="product" data-category="sites" data-name="doce sabor botucatu">
+      <div class="product-image">
+        <img src="doce-sabor.ico" alt="Doce Sabor" loading="lazy">
+        <div class="product-badge">🌐 SITE</div>
+      </div>
+      <div class="product-content">
+        <div class="product-category">Sites</div>
+        <h3>Doce Sabor</h3>
+        <p class="product-description">Loja digital da Doce Sabor com catálogo e informações dos produtos.</p>
+        <div class="product-footer">
+          <div class="seller">Localização<strong>Botucatu</strong></div>
+          <a class="product-button" href="https://doce-sabor.onrender.com" target="_blank">Ver site →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="product" data-category="outros" data-name="nova oportunidade">
+      <div class="product-image"><img src="https://via.placeholder.com/600x450/070b13/00e5ff?text=SNOW+HUB" alt="Oportunidade" loading="lazy"></div>
+      <div class="product-content">
+        <div class="product-category">Oportunidade</div>
+        <h3>Espaço disponível</h3>
+        <p class="product-description">Este espaço pode ser utilizado para divulgação de um novo produto ou serviço.</p>
+        <div class="product-footer">
+          <div class="seller">Anuncie aqui<strong>R$5</strong></div>
+          <a class="product-button" href="#anunciar">Anunciar →</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="product" data-category="outros" data-name="vaga">
+      <div class="product-image"><img src="https://via.placeholder.com/600x450/070b13/007bff?text=SEU+PRODUTO" alt="Espaço para anúncio" loading="lazy"></div>
+      <div class="product-content">
+        <div class="product-category">Disponível</div>
+        <h3>Seu produto aqui</h3>
+        <p class="product-description">Divulgue seu produto para pessoas interessadas no mercado digital.</p>
+        <div class="product-footer">
+          <div class="seller">Divulgação<strong>R$5</strong></div>
+          <a class="product-button" href="#anunciar">Saiba mais →</a>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="empty" id="empty">
+    <div class="empty-icon">🔎</div>
+    <h3>Nenhum resultado encontrado</h3>
+    <p>Tente pesquisar por outro termo.</p>
+  </div>
+
+  <section class="cta" id="anunciar">
+    <h2>Seu produto pode aparecer aqui.</h2>
+    <p>Divulgue seu produto, serviço ou projeto dentro da Snow Hub e alcance pessoas interessadas no mercado digital.</p>
+    <a href="https://wa.me/5514991023986?text=Olá!%20Quero%20anunciar%20na%20Snow%20Hub." target="_blank" class="btn btn-primary">📢 Quero anunciar por R$5</a>
+  </section>
+
+  <div class="notice"><strong>⚠️ Aviso importante:</strong> A Snow Hub atua como plataforma de divulgação. Não realizamos vendas diretamente, não intermediamos pagamentos e não nos responsabilizamos por negociações, entregas, produtos ou serviços anunciados por terceiros. Sempre verifique a reputação do vendedor antes de negociar.</div>
+</main>
+
+<footer>
+  <div class="footer-logo">❄️ SNOW <span>HUB</span></div>
+  <p>Negócios digitais. Tecnologia. Oportunidades.</p>
+  <p class="zyntra">Powered by <span>Zyntra</span> • © 2026 Snow Hub</p>
+</footer>
+
+<script>
+const particles=document.getElementById("particles");
+for(let i=0;i<55;i++){const p=document.createElement("span");p.className="particle";p.style.left=Math.random()*100+"%";p.style.animationDuration=8+Math.random()*15+"s";p.style.animationDelay=Math.random()*15+"s";p.style.opacity=.15+Math.random()*.5;particles.appendChild(p)}
+
+const searchInput=document.getElementById("searchInput");
+const products=document.querySelectorAll(".product");
+const filters=document.querySelectorAll(".filter");
+const empty=document.getElementById("empty");
+const productCount=document.getElementById("productCount");
+productCount.textContent=products.length;
+
+let currentCategory="all";
+
+function filterProducts(){
+  const search=searchInput.value.toLowerCase().trim();
+  let visible=0;
+  products.forEach(product=>{
+    const name=product.dataset.name.toLowerCase();
+    const category=product.dataset.category;
+    const show=name.includes(search)&&(currentCategory==="all"||category===currentCategory);
+    product.style.display=show?"":"none";
+    if(show) visible++;
+  });
+  empty.style.display=visible===0?"block":"none";
+}
+
+searchInput.addEventListener("input",filterProducts);
+
+filters.forEach(button=>{
+  button.addEventListener("click",()=>{
+    filters.forEach(b=>b.classList.remove("active"));
+    button.classList.add("active");
+    currentCategory=button.dataset.category;
+    filterProducts();
+  });
+});
+
+products.forEach(card=>{
+  card.addEventListener("mousemove",e=>{
+    if(window.innerWidth<800)return;
+    const r=card.getBoundingClientRect();
+    const x=e.clientX-r.left,y=e.clientY-r.top;
+    const rx=((y-r.height/2)/(r.height/2))*-2;
+    const ry=((x-r.width/2)/(r.width/2))*2;
+    card.style.transform=`translateY(-8px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+  });
+  card.addEventListener("mouseleave",()=>card.style.transform="");
+});
+</script>
+</body>
+</html>
